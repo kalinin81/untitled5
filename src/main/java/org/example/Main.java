@@ -90,8 +90,9 @@ public class Main {
                 .distinct()
                 .sorted(Comparator.reverseOrder())
                 .limit(3)
-                .min(Integer::compareTo)
-                .get());
+                .skip(2)
+                .findFirst()
+                .orElseThrow());
 
     }
 
