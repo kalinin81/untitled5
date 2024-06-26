@@ -87,7 +87,7 @@ public class Main {
 
     private static void thirdMaxUnique() {
         System.out.println(List.of(5, 2, 10, 9, 4, 3, 10, 1, 13).stream()
-                .collect(Collectors.toSet()).stream()
+                .distinct()
                 .sorted(Comparator.reverseOrder())
                 .limit(3)
                 .min(Integer::compareTo)
