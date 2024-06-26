@@ -82,7 +82,7 @@ public class Main {
                         ).stream()
                         .filter(employee -> employee.getJob() == Job.ENGINEER)
                         .max(Comparator.comparing(Employee::getAge))
-                        .get().getName());
+                        .orElseThrow().getName());
     }
 
     private static void thirdMaxUnique() {
