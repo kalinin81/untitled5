@@ -26,13 +26,8 @@ public class Main {
         System.out.println(
                 List.of(e1, e2, e3).stream()
                         .flatMap(strings -> strings.stream())
-                        .reduce((s, s2) -> {
-                            if (s.length() <= s2.length()) {
-                                return s2;
-                            } else {
-                                return s;
-                            }
-                        }).get()
+                        .sorted(Comparator.comparing(String::length, Comparator.reverseOrder()))
+                        .findFirst().get()
         );
     }
 
