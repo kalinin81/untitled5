@@ -109,7 +109,6 @@ public class Main {
     }
 
     private static void onlyUnique() {
-        System.out.println(List.of(1, 1, 2, 2, 3, 3).stream()
-                .collect(Collectors.toSet()));
+        List.of(1, 1, 2, 2, 3, 3).stream().distinct();
     }
 }
